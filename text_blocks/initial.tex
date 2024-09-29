@@ -1,0 +1,19 @@
+\documentclass[a4paper,12pt, tikz]{scrartcl}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+\usepackage{lipsum}
+\usepackage{color}
+\usepackage{enumitem,amssymb, amsmath}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+
+\newcommand\Vtextvisiblespace[1][.3em]{%
+  \mbox{\kern.06em\vrule height.3ex}%
+  \vbox{\hrule width#1}%
+  \hbox{\vrule height.3ex}}
+\newcommand{\checkbox}{ {\fboxsep=-.2pt\fbox{\rule{0pt}{2ex}\rule{2ex}{0pt}}}}
+
+\newcommand{\subtablaDescrip}{ \begin{tabular}{ll}&\\ prioridad: & \Vtextvisiblespace[2em] \\ dificultad: & \Vtextvisiblespace[2em]\\&\\ \end{tabular}}
+
+\begin{document}

@@ -1,9 +1,12 @@
-\documentclass[a4paper,12pt]{scrartcl}
+\documentclass[a4paper,12pt, tikz]{scrartcl}
 \usepackage{pdflscape}
 \usepackage{tabularx}
 \usepackage{lipsum}
 \usepackage{color}
 \usepackage{enumitem,amssymb, amsmath}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
 
 \newcommand\Vtextvisiblespace[1][.3em]{%
   \mbox{\kern.06em\vrule height.3ex}%
@@ -11,9 +14,22 @@
   \hbox{\vrule height.3ex}}
 \newcommand{\checkbox}{ {\fboxsep=-.2pt\fbox{\rule{0pt}{2ex}\rule{2ex}{0pt}}}}
 
-\newcommand{\subtablaDescrip}{ \begin{tabular}{ll}&\\ prioridad: & \Vtextvisiblespace[2em] \\ dificultad & \Vtextvisiblespace[2em]\\&\\ \end{tabular}}
+\newcommand{\subtablaDescrip}{ \begin{tabular}{ll}&\\ prioridad: & \Vtextvisiblespace[2em] \\ dificultad: & \Vtextvisiblespace[2em]\\&\\ \end{tabular}}
 
 \begin{document}
+
+
+\begin{tikzpicture}[scale=0.5]
+    \tkzInit[xmin=-5,xmax=5,ymin=-5,ymax=5]
+    
+    \draw[help lines, color=gray!30, dashed] (0,0) grid (10,10);
+    \draw[->,ultra thick] (0,0)--(10,0) node[right]{semana};
+    \draw[->,ultra thick] (0,0)--(0,10) node[above]{puntos};
+    
+    \end{tikzpicture}
+
+    \newpage
+
     \section*{Semana DATE1 -- DATE2}
     \thispagestyle{empty}
     \noindent
@@ -44,7 +60,64 @@
     \end{tabularx}
 
     \newpage
-test\\
+ 
 
-\framebox[40ex]{\rule{0pt}{5ex}}
+
+\begin{center}
+\begin{tabular}{ll}
+    \textbf{Facilidades} & \textbf{Dificultades} \\
+  \fcolorbox{black!50!black}{white}{
+    \begin{tabular}{c}
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \end{tabular}
+
+  } &
+  \fcolorbox{black!50!black}{white}{
+    \begin{tabular}{c}
+        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+        \end{tabular}
+  } \\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\textbf{Reflexiones}\\ \vspace{3ex}
+\fcolorbox{black!50!black}{white}{
+    \begin{tabular}{l}
+    \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \end{tabular}
+  }
+\end{center}
+\vspace{5ex}
+
+\begin{center}
+    \textbf{Notas}\\ \vspace{3ex}
+    \fcolorbox{black!50!black}{white}{
+        \begin{tabular}{l}
+        \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+        \end{tabular}
+      }
+    \end{center}
+
+\vspace{5ex}
+Resultado semana: \Vtextvisiblespace[2em]
+
 \end{document}

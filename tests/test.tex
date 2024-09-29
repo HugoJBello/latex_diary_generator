@@ -1,0 +1,50 @@
+\documentclass[a4paper,12pt]{scrartcl}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+\usepackage{lipsum}
+\usepackage{color}
+\usepackage{enumitem,amssymb, amsmath}
+
+\newcommand\Vtextvisiblespace[1][.3em]{%
+  \mbox{\kern.06em\vrule height.3ex}%
+  \vbox{\hrule width#1}%
+  \hbox{\vrule height.3ex}}
+\newcommand{\checkbox}{ {\fboxsep=-.2pt\fbox{\rule{0pt}{2ex}\rule{2ex}{0pt}}}}
+
+\newcommand{\subtablaDescrip}{ \begin{tabular}{ll}&\\ prioridad: & \Vtextvisiblespace[2em] \\ dificultad & \Vtextvisiblespace[2em]\\&\\ \end{tabular}}
+
+\begin{document}
+    \section*{Semana DATE1 -- DATE2}
+    \thispagestyle{empty}
+    \noindent
+    \begin{tabularx}{\linewidth}{|X|c c|}
+        \hline
+      \textbf{Tarea} & \textbf{descripción} & \textbf{proceso}\\
+      \hline
+       1.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+      \hline
+      2.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+      \hline
+      3.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+      \hline
+      4.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+      \hline
+      5.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+      \hline
+      6.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+      \hline
+      7.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+      \hline
+      8.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+      \hline
+      9.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+      \hline
+      10.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+      \hline
+    \end{tabularx}
+
+    \newpage
+test\\
+
+\framebox[40ex]{\rule{0pt}{5ex}}
+\end{document}

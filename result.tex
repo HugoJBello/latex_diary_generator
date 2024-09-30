@@ -7,6 +7,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{tkz-euclide}
+\usepackage{float}
 
 \newcommand\Vtextvisiblespace[1][.3em]{%
   \mbox{\kern.06em\vrule height.3ex}%
@@ -17,115 +18,20 @@
 \newcommand{\subtablaDescrip}{ \begin{tabular}{ll}&\\ prioridad: & \Vtextvisiblespace[2em] \\ dificultad: & \Vtextvisiblespace[2em]\\&\\ \end{tabular}}
 
 \begin{document} 
-\section*{Periodo Sep 23, 2024, 5 semanas }
+\section*{Periodo Sep 30, 2024, 8 semanas }
 
 \newpage
 
 \section*{Gráfica}
 
-\begin{tikzpicture}[scale=1.2]
-\tkzInit[xmin=-5,xmax=5,ymin=-5,ymax=5]
-
-\draw[help lines, color=gray!30, dashed] (0,0) grid (12,10);
-\draw[->,ultra thick] (0,0)--(12,0) node[right]{semana};
-\draw[->,ultra thick] (0,0)--(0,10) node[above]{puntos};
-\end{tikzpicture}
-
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{graph.png}
+\end{figure}
 
   \newpage
   $\;$
   \newpage
-\section*{Semana Sep 23, 2024 -- Sep 29, 2024}
-\thispagestyle{empty}
-\noindent
-\begin{tabularx}{\linewidth}{|X|c c|}
-    \hline
-  \textbf{Tarea} & \textbf{descripción} & \textbf{proceso}\\
-  \hline
-   1.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-  \hline
-  2.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-  \hline
-  3.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-  \hline
-  4.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-  \hline
-  5.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-  \hline
-  6.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-  \hline
-  7.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-  \hline
-  8.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-  \hline
-  9.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-  \hline
-  10.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-  \hline
-\end{tabularx}
-
-\newpage
-
-
-
-\begin{center}
-\begin{tabular}{ll}
-\textbf{Facilidades} & \textbf{Dificultades} \\
-\fcolorbox{black!50!black}{white}{
-\begin{tabular}{c}
-\phantom{Lorem ipsum dolor sit amet, consectetur}\\
-\phantom{Lorem ipsum dolor sit amet, consectetur}\\
-\end{tabular}
-
-} &
-\fcolorbox{black!50!black}{white}{
-\begin{tabular}{c}
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \end{tabular}
-} \\
-\end{tabular}
-\end{center}
-
-\begin{center}
-\textbf{Reflexiones}\\ \vspace{3ex}
-\fcolorbox{black!50!black}{white}{
-\begin{tabular}{l}
-\phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
-\phantom{Lorem ipsum dolor sit amet, consectetur}\\
-\phantom{Lorem ipsum dolor sit amet, consectetur}\\
-\phantom{Lorem ipsum dolor sit amet, consectetur}\\
-\phantom{Lorem ipsum dolor sit amet, consectetur}\\
-\phantom{Lorem ipsum dolor sit amet, consectetur}\\
-\phantom{Lorem ipsum dolor sit amet, consectetur}\\
-\phantom{Lorem ipsum dolor sit amet, consectetur}\\
-\phantom{Lorem ipsum dolor sit amet, consectetur}\\
-\end{tabular}
-}
-\end{center}
-\vspace{5ex}
-
-\begin{center}
-\textbf{Notas}\\ \vspace{3ex}
-\fcolorbox{black!50!black}{white}{
-    \begin{tabular}{l}
-    \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \end{tabular}
-  }
-\end{center}
-
-\vspace{5ex}
-Resultado semana: \Vtextvisiblespace[2em]
-
-\newpage
 \section*{Semana Sep 30, 2024 -- Oct 06, 2024}
 \thispagestyle{empty}
 \noindent
@@ -166,6 +72,9 @@ Resultado semana: \Vtextvisiblespace[2em]
 \begin{tabular}{c}
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \end{tabular}
 
 } &
@@ -173,6 +82,10 @@ Resultado semana: \Vtextvisiblespace[2em]
 \begin{tabular}{c}
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+
     \end{tabular}
 } \\
 \end{tabular}
@@ -191,6 +104,10 @@ Resultado semana: \Vtextvisiblespace[2em]
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \end{tabular}
 }
 \end{center}
@@ -201,6 +118,10 @@ Resultado semana: \Vtextvisiblespace[2em]
 \fcolorbox{black!50!black}{white}{
     \begin{tabular}{l}
     \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
@@ -257,6 +178,9 @@ Resultado semana: \Vtextvisiblespace[2em]
 \begin{tabular}{c}
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \end{tabular}
 
 } &
@@ -264,6 +188,10 @@ Resultado semana: \Vtextvisiblespace[2em]
 \begin{tabular}{c}
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+
     \end{tabular}
 } \\
 \end{tabular}
@@ -282,6 +210,10 @@ Resultado semana: \Vtextvisiblespace[2em]
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \end{tabular}
 }
 \end{center}
@@ -292,6 +224,10 @@ Resultado semana: \Vtextvisiblespace[2em]
 \fcolorbox{black!50!black}{white}{
     \begin{tabular}{l}
     \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
@@ -348,6 +284,9 @@ Resultado semana: \Vtextvisiblespace[2em]
 \begin{tabular}{c}
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \end{tabular}
 
 } &
@@ -355,6 +294,10 @@ Resultado semana: \Vtextvisiblespace[2em]
 \begin{tabular}{c}
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+
     \end{tabular}
 } \\
 \end{tabular}
@@ -373,6 +316,10 @@ Resultado semana: \Vtextvisiblespace[2em]
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \end{tabular}
 }
 \end{center}
@@ -383,6 +330,10 @@ Resultado semana: \Vtextvisiblespace[2em]
 \fcolorbox{black!50!black}{white}{
     \begin{tabular}{l}
     \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
@@ -439,6 +390,9 @@ Resultado semana: \Vtextvisiblespace[2em]
 \begin{tabular}{c}
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \end{tabular}
 
 } &
@@ -446,6 +400,10 @@ Resultado semana: \Vtextvisiblespace[2em]
 \begin{tabular}{c}
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+
     \end{tabular}
 } \\
 \end{tabular}
@@ -464,6 +422,10 @@ Resultado semana: \Vtextvisiblespace[2em]
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
 \end{tabular}
 }
 \end{center}
@@ -474,6 +436,434 @@ Resultado semana: \Vtextvisiblespace[2em]
 \fcolorbox{black!50!black}{white}{
     \begin{tabular}{l}
     \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \end{tabular}
+  }
+\end{center}
+
+\vspace{5ex}
+Resultado semana: \Vtextvisiblespace[2em]
+
+\newpage
+\section*{Semana Oct 28, 2024 -- Nov 03, 2024}
+\thispagestyle{empty}
+\noindent
+\begin{tabularx}{\linewidth}{|X|c c|}
+    \hline
+  \textbf{Tarea} & \textbf{descripción} & \textbf{proceso}\\
+  \hline
+   1.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  2.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  3.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  4.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  5.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  6.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  7.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  8.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  9.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  10.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+\end{tabularx}
+
+\newpage
+
+
+
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Facilidades} & \textbf{Dificultades} \\
+\fcolorbox{black!50!black}{white}{
+\begin{tabular}{c}
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\end{tabular}
+
+} &
+\fcolorbox{black!50!black}{white}{
+\begin{tabular}{c}
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+
+    \end{tabular}
+} \\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\textbf{Reflexiones}\\ \vspace{3ex}
+\fcolorbox{black!50!black}{white}{
+\begin{tabular}{l}
+\phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\end{tabular}
+}
+\end{center}
+\vspace{5ex}
+
+\begin{center}
+\textbf{Notas}\\ \vspace{3ex}
+\fcolorbox{black!50!black}{white}{
+    \begin{tabular}{l}
+    \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \end{tabular}
+  }
+\end{center}
+
+\vspace{5ex}
+Resultado semana: \Vtextvisiblespace[2em]
+
+\newpage
+\section*{Semana Nov 04, 2024 -- Nov 10, 2024}
+\thispagestyle{empty}
+\noindent
+\begin{tabularx}{\linewidth}{|X|c c|}
+    \hline
+  \textbf{Tarea} & \textbf{descripción} & \textbf{proceso}\\
+  \hline
+   1.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  2.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  3.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  4.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  5.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  6.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  7.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  8.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  9.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  10.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+\end{tabularx}
+
+\newpage
+
+
+
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Facilidades} & \textbf{Dificultades} \\
+\fcolorbox{black!50!black}{white}{
+\begin{tabular}{c}
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\end{tabular}
+
+} &
+\fcolorbox{black!50!black}{white}{
+\begin{tabular}{c}
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+
+    \end{tabular}
+} \\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\textbf{Reflexiones}\\ \vspace{3ex}
+\fcolorbox{black!50!black}{white}{
+\begin{tabular}{l}
+\phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\end{tabular}
+}
+\end{center}
+\vspace{5ex}
+
+\begin{center}
+\textbf{Notas}\\ \vspace{3ex}
+\fcolorbox{black!50!black}{white}{
+    \begin{tabular}{l}
+    \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \end{tabular}
+  }
+\end{center}
+
+\vspace{5ex}
+Resultado semana: \Vtextvisiblespace[2em]
+
+\newpage
+\section*{Semana Nov 11, 2024 -- Nov 17, 2024}
+\thispagestyle{empty}
+\noindent
+\begin{tabularx}{\linewidth}{|X|c c|}
+    \hline
+  \textbf{Tarea} & \textbf{descripción} & \textbf{proceso}\\
+  \hline
+   1.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  2.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  3.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  4.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  5.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  6.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  7.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  8.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  9.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  10.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+\end{tabularx}
+
+\newpage
+
+
+
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Facilidades} & \textbf{Dificultades} \\
+\fcolorbox{black!50!black}{white}{
+\begin{tabular}{c}
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\end{tabular}
+
+} &
+\fcolorbox{black!50!black}{white}{
+\begin{tabular}{c}
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+
+    \end{tabular}
+} \\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\textbf{Reflexiones}\\ \vspace{3ex}
+\fcolorbox{black!50!black}{white}{
+\begin{tabular}{l}
+\phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\end{tabular}
+}
+\end{center}
+\vspace{5ex}
+
+\begin{center}
+\textbf{Notas}\\ \vspace{3ex}
+\fcolorbox{black!50!black}{white}{
+    \begin{tabular}{l}
+    \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \end{tabular}
+  }
+\end{center}
+
+\vspace{5ex}
+Resultado semana: \Vtextvisiblespace[2em]
+
+\newpage
+\section*{Semana Nov 18, 2024 -- Nov 24, 2024}
+\thispagestyle{empty}
+\noindent
+\begin{tabularx}{\linewidth}{|X|c c|}
+    \hline
+  \textbf{Tarea} & \textbf{descripción} & \textbf{proceso}\\
+  \hline
+   1.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  2.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  3.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  4.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  5.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  6.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  7.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  8.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  9.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+  10.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
+  \hline
+\end{tabularx}
+
+\newpage
+
+
+
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Facilidades} & \textbf{Dificultades} \\
+\fcolorbox{black!50!black}{white}{
+\begin{tabular}{c}
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\end{tabular}
+
+} &
+\fcolorbox{black!50!black}{white}{
+\begin{tabular}{c}
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+
+    \end{tabular}
+} \\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\textbf{Reflexiones}\\ \vspace{3ex}
+\fcolorbox{black!50!black}{white}{
+\begin{tabular}{l}
+\phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\phantom{Lorem ipsum dolor sit amet, consectetur}\\
+\end{tabular}
+}
+\end{center}
+\vspace{5ex}
+
+\begin{center}
+\textbf{Notas}\\ \vspace{3ex}
+\fcolorbox{black!50!black}{white}{
+    \begin{tabular}{l}
+    \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
+    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\
     \phantom{Lorem ipsum dolor sit amet, consectetur}\\

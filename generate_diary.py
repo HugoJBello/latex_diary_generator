@@ -1,6 +1,7 @@
 
 import datetime
 import locale
+from matplotlib import pyplot as plt
 
 
 def generate_heading():
@@ -8,7 +9,43 @@ def generate_heading():
     return f.read()
 
 
+def generate_graph(initial_date, number_of_weeks=15):
+    fig, ax = plt.subplots()
+
+    # We need to draw the canvas, otherwise the labels won't be positioned and 
+    # won't have values yet.
+    fig.canvas.draw()
+
+
+
+    ax.axis([0, number_of_weeks, 0, 25])
+
+    plt.xticks(range(0, number_of_weeks))
+    plt.yticks(range(0, 25))
+
+    ticks = []
+
+    current_date = initial_date
+    for i in range(number_of_weeks):
+        start = current_date - datetime.timedelta(days=current_date.weekday())
+        end = start + datetime.timedelta(days=6)
+        current_date = end + datetime.timedelta(days=1)
+        date_str = current_date.strftime("%b %d, %Y")
+        ticks.append(date_str)
+
+    
+
+    plt.grid()
+    plt.xticks(rotation=70)
+
+
+
+    ax.set_xticklabels(ticks)
+    plt.savefig("graph.png", bbox_inches='tight')
+
 def generate_intro(start, semanas):
+    generate_graph(start, semanas)
+
     f = open("text_blocks/intro.tex", "r")
     intro =  f.read()
     start_str = start.strftime("%b %d, %Y")
@@ -33,7 +70,7 @@ def generate_calendar_page(start, end):
 def main():
 
     initial_date =  datetime.datetime.now()
-    number_of_weeks = 5
+    number_of_weeks = 8
 
     resulting_tex = ""
 

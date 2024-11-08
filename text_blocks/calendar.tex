@@ -1,132 +1,8 @@
-\documentclass[a4paper,12pt, tikz]{scrartcl}
-\usepackage{pdflscape}
-\usepackage{tabularx}
-\usepackage{lipsum}
-\usepackage{color}
-\usepackage{enumitem,amssymb, amsmath}
-\usepackage{xcolor}
-\usepackage{tikz}
-\usepackage{tkz-euclide}
-
-\newcommand\Vtextvisiblespace[1][.3em]{%
-  \mbox{\kern.06em\vrule height.3ex}%
-  \vbox{\hrule width#1}%
-  \hbox{\vrule height.3ex}}
-\newcommand{\checkbox}{ {\fboxsep=-.2pt\fbox{\rule{0pt}{2ex}\rule{2ex}{0pt}}}}
-
-\newcommand{\subtablaDescrip}{ \begin{tabular}{ll}&\\ prioridad: & \Vtextvisiblespace[2em] \\ dificultad: & \Vtextvisiblespace[2em]\\&\\ \end{tabular}}
-
-\begin{document}
-
-
-\begin{tikzpicture}[scale=0.5]
-    \tkzInit[xmin=-5,xmax=5,ymin=-5,ymax=5]
-    
-    \draw[help lines, color=gray!30, dashed] (0,0) grid (10,10);
-    \draw[->,ultra thick] (0,0)--(10,0) node[right]{semana};
-    \draw[->,ultra thick] (0,0)--(0,10) node[above]{puntos};
-    
-    \end{tikzpicture}
-
-    \newpage
-
-    \section*{Semana DATE1 -- DATE2}
-    \thispagestyle{empty}
     \noindent
-    \begin{tabularx}{\linewidth}{|X|c c|}
-        \hline
-      \textbf{Tarea} & \textbf{descripción} & \textbf{proceso}\\
-      \hline
-       1.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-      \hline
-      2.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-      \hline
-      3.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-      \hline
-      4.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-      \hline
-      5.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-      \hline
-      6.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-      \hline
-      7.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-      \hline
-      8.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-      \hline
-      9.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-      \hline
-      10.\vspace{4ex} &      \subtablaDescrip     & $\square\square\square\square\square$ \\
-      \hline
-    \end{tabularx}
-
-    \newpage
- 
-
-
-\begin{center}
-\begin{tabular}{ll}
-    \textbf{Facilidades} & \textbf{Dificultades} \\
-  \fcolorbox{black!50!black}{white}{
-    \begin{tabular}{c}
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \end{tabular}
-
-  } &
-  \fcolorbox{black!50!black}{white}{
-    \begin{tabular}{c}
-        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-        \end{tabular}
-  } \\
-\end{tabular}
-\end{center}
-
-\begin{center}
-\textbf{Reflexiones}\\ \vspace{3ex}
-\fcolorbox{black!50!black}{white}{
-    \begin{tabular}{l}
-    \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-    \end{tabular}
-  }
-\end{center}
-\vspace{5ex}
-
-\begin{center}
-    \textbf{Notas}\\ \vspace{3ex}
-    \fcolorbox{black!50!black}{white}{
-        \begin{tabular}{l}
-        \phantom{Lorem ipsum dolor sit amet, consectetur Lorem  Lorem ipsum dolor sit amet, consectetur}\\
-        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-        \phantom{Lorem ipsum dolor sit amet, consectetur}\\
-        \end{tabular}
-      }
-    \end{center}
-
-\vspace{5ex}
-Resultado semana: \Vtextvisiblespace[2em]
-
-\newpage
-
-\thispagestyle{empty}
-    \noindent
+    \section*{MES, DATEL - DATEX}
     \begin{tabularx}{\linewidth}{|c|X|X|X|}
         \hline
-      & \textbf{L DATEL} & \textbf{M DATEM} & \textbf{X DATEX}\\
+      & \textbf{L} DATEL & \textbf{M} DATEM & \textbf{X} DATEX\\
       \hline 
       \hline 
       \phantom{aa}&\phantom{Lorem ipsum dolor sit amet, consectetur}  &  \phantom{Lorem ipsum dolor sit amet, consectetur}    & \phantom{Lorem ipsum dolor sit amet, consectetur}  \\
@@ -182,11 +58,11 @@ Resultado semana: \Vtextvisiblespace[2em]
 
     \newpage
 
-    \thispagestyle{empty}
         \noindent
+        \section*{\phantom{Lorem}}
         \begin{tabularx}{\linewidth}{|c|X|X|c|c|}
             \hline
-          & \textbf{J DATEJ} & \textbf{V DATEV} & \textbf{S DATES} &   \textbf{D DATED} \\
+          & \textbf{J} DATEJ & \textbf{V} DATEV & \textbf{S} \tiny{DATES} &   \textbf{D} \tiny{DATED}\\
           \hline 
           \hline 
           \phantom{aa}&\phantom{Lorem ipsum dolor sit amet, consectetur}  &  \phantom{Lorem ipsum dolor sit amet, consectetur}    & \phantom{Lorem ipsum} & \phantom{Lorem ipsum} \\
@@ -236,5 +112,3 @@ Resultado semana: \Vtextvisiblespace[2em]
           \phantom{aa}&\phantom{Lorem ipsum dolor sit amet, consectetur}  &  \phantom{Lorem ipsum dolor sit amet, consectetur}    & \phantom{Lorem ipsum} & \phantom{Lorem ipsum }\\
           \hline  
         \end{tabularx}
-
-\end{document}

@@ -2,7 +2,7 @@
 import datetime
 import locale
 from matplotlib import pyplot as plt
-
+from lunar_phase import phase,position
 
 def generate_heading():
     f = open("text_blocks/initial.tex", "r")
@@ -74,35 +74,52 @@ def generate_calendar_intro(start, semanas):
     intro = intro.replace("WEEKS", str(semanas))
     return intro
 
+
 def generate_calendar_page(start):
 
 
     f = open("text_blocks/calendar.tex", "r")
     table =  f.read()
     mes = start.strftime("%b")
-
-    dateL = "\\textbf{\\sffamily{" + start.strftime("%d")                                + "}} " + start.strftime("%b")              
-    dateM = "\\textbf{\\sffamily{" + (start + datetime.timedelta(days=1)).strftime("%d") + "}} " + (start + datetime.timedelta(days=1)).strftime("%b") 
-    dateX = "\\textbf{\\sffamily{" + (start + datetime.timedelta(days=2)).strftime("%d") + "}} " + (start + datetime.timedelta(days=2)).strftime("%b") 
-    dateJ = "\\textbf{\\sffamily{" + (start + datetime.timedelta(days=3)).strftime("%d") + "}} " + (start + datetime.timedelta(days=3)).strftime("%b") 
-    dateV = "\\textbf{\\sffamily{" + (start + datetime.timedelta(days=4)).strftime("%d") + "}} " + (start + datetime.timedelta(days=4)).strftime("%b") 
-    dateS = "\\textbf{\\sffamily{" + (start + datetime.timedelta(days=5)).strftime("%d") + "}} " + (start + datetime.timedelta(days=5)).strftime("%b") 
-    dateD = "\\textbf{\\sffamily{" + (start + datetime.timedelta(days=6)).strftime("%d") + "}} " + (start + datetime.timedelta(days=6)).strftime("%b") 
-
-
+    
+    dateL = start
+    dateM = start + datetime.timedelta(days=1)
+    dateX = start + datetime.timedelta(days=2)
+    dateJ = start + datetime.timedelta(days=3)
+    dateV = start + datetime.timedelta(days=4)
+    dateS = start + datetime.timedelta(days=5)
+    dateD = start + datetime.timedelta(days=7)
 
     table = table.replace("MES", mes)
-    table = table.replace("DATEL", dateL)
-    table = table.replace("DATEM", dateM)
-    table = table.replace("DATEX", dateX)
-    table = table.replace("DATEJ", dateJ)
-    table = table.replace("DATEV", dateV)
-    table = table.replace("DATES", dateS)
-    table = table.replace("DATED", dateD)
+    table = table.replace("DATEL", surround_day(dateL))
+    table = table.replace("DATEM", surround_day(dateM))
+    table = table.replace("DATEX", surround_day(dateX))
+    table = table.replace("DATEJ", surround_day(dateJ))
+    table = table.replace("DATEV", surround_day(dateV))
+    table = table.replace("DATES", surround_day(dateS))
+    table = table.replace("DATED", surround_day(dateD))
+    
+    table = table.replace("MOONL", get_moon_image(phase(position(dateL))[0]))
+    table = table.replace("MOONM", get_moon_image(phase(position(dateM))[0]))
+    table = table.replace("MOONX", get_moon_image(phase(position(dateX))[0]))
+    table = table.replace("MOONJ", get_moon_image(phase(position(dateJ))[0]))
+    table = table.replace("MOONV", get_moon_image(phase(position(dateV))[0]))
+    table = table.replace("MOONS", get_moon_image(phase(position(dateS))[0]))
+    table = table.replace("MOOND", get_moon_image(phase(position(dateD))[0]))
+
+    
 
     return table
 
 
+def surround_day(date):
+    return "\\textbf{\\sffamily{" + date.strftime("%d")  + "}} " + date.strftime("%b")
+
+def get_moon_image(phase_index):
+    if phase_index == 8 :
+        phase_index = 0
+    figure = """\\vspace{0.01cm} \centerline{\\includegraphics[width=0.5cm]{moon_phases/Moon_phase_number.svg.png}} \\vspace{0.1cm}"""
+    return figure.replace("number", str(phase_index))    
 
 def main():
 

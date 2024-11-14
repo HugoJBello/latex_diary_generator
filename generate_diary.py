@@ -81,13 +81,13 @@ def generate_calendar_page(start):
     table =  f.read()
     mes = start.strftime("%b")
 
-    dateL = start.strftime("%Y-%m-%d")
-    dateM = (start + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
-    dateX = (start + datetime.timedelta(days=2)).strftime("%Y-%m-%d")
-    dateJ = (start + datetime.timedelta(days=3)).strftime("%Y-%m-%d")
-    dateV = (start + datetime.timedelta(days=4)).strftime("%Y-%m-%d")
-    dateS = (start + datetime.timedelta(days=5)).strftime("%Y-%m-%d")
-    dateD = (start + datetime.timedelta(days=6)).strftime("%Y-%m-%d")
+    dateL = "\\textbf{\\sffamily{" + start.strftime("%d")                                + "}} " + start.strftime("%b")              
+    dateM = "\\textbf{\\sffamily{" + (start + datetime.timedelta(days=1)).strftime("%d") + "}} " + (start + datetime.timedelta(days=1)).strftime("%b") 
+    dateX = "\\textbf{\\sffamily{" + (start + datetime.timedelta(days=2)).strftime("%d") + "}} " + (start + datetime.timedelta(days=2)).strftime("%b") 
+    dateJ = "\\textbf{\\sffamily{" + (start + datetime.timedelta(days=3)).strftime("%d") + "}} " + (start + datetime.timedelta(days=3)).strftime("%b") 
+    dateV = "\\textbf{\\sffamily{" + (start + datetime.timedelta(days=4)).strftime("%d") + "}} " + (start + datetime.timedelta(days=4)).strftime("%b") 
+    dateS = "\\textbf{\\sffamily{" + (start + datetime.timedelta(days=5)).strftime("%d") + "}} " + (start + datetime.timedelta(days=5)).strftime("%b") 
+    dateD = "\\textbf{\\sffamily{" + (start + datetime.timedelta(days=6)).strftime("%d") + "}} " + (start + datetime.timedelta(days=6)).strftime("%b") 
 
 
 

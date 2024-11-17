@@ -3,6 +3,13 @@ import datetime
 import locale
 from matplotlib import pyplot as plt
 from lunar_phase import phase,position
+import json
+
+with open('fechas/fechas_importantes_uva.json', 'r') as file:
+    fechas_importantes_uva = json.load(file)
+
+with open('fechas/festivos.json', 'r') as file:
+    festivos = json.load(file)
 
 def generate_heading():
     f = open("text_blocks/initial.tex", "r")
@@ -106,6 +113,23 @@ def generate_calendar_page(start):
     table = table.replace("MOONV", get_moon_image(phase(position(dateV))[0]))
     table = table.replace("MOONS", get_moon_image(phase(position(dateS))[0]))
     table = table.replace("MOOND", get_moon_image(phase(position(dateD))[0]))
+    
+    
+    table = table.replace("SPECIALL", get_important_dates(dateL))
+    table = table.replace("SPECIALM", get_important_dates(dateM))
+    table = table.replace("SPECIALX", get_important_dates(dateX))
+    table = table.replace("SPECIALJ", get_important_dates(dateJ))
+    table = table.replace("SPECIALV", get_important_dates(dateV))
+    table = table.replace("SPECIALS", get_important_dates(dateS))
+    table = table.replace("SPECIALD", get_important_dates(dateD))
+    
+    table = table.replace("FESTIVOL", get_festivity_dates(dateL))
+    table = table.replace("FESTIVOM", get_festivity_dates(dateM))
+    table = table.replace("FESTIVOX", get_festivity_dates(dateX))
+    table = table.replace("FESTIVOJ", get_festivity_dates(dateJ))
+    table = table.replace("FESTIVOV", get_festivity_dates(dateV))
+    table = table.replace("FESTIVOS", get_festivity_dates(dateS))
+    table = table.replace("FESTIVOD", get_festivity_dates(dateD))
 
     
 
@@ -120,6 +144,23 @@ def get_moon_image(phase_index):
         phase_index = 0
     figure = """\\vspace{0.01cm} \centerline{\\includegraphics[width=0.5cm]{moon_phases/Moon_phase_number.svg.png}} \\vspace{0.1cm}"""
     return figure.replace("number", str(phase_index))    
+
+def get_important_dates(date):
+    formated_date = date.strftime("%d/%m/%Y")
+    result = ""
+    if formated_date in fechas_importantes_uva: 
+        result = result + fechas_importantes_uva[formated_date]
+    return "\\small{" + result + "}"
+
+
+def get_festivity_dates(date):
+    formated_date = date.strftime("%d/%m/%Y")
+    result = ""
+    if formated_date in festivos: 
+        result = result + " " + festivos[formated_date]
+    return "\\small{" + result + "}"
+ 
+    
 
 def main():
 

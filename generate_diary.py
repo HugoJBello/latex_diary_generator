@@ -76,9 +76,11 @@ def generate_calendar_intro(start, semanas):
     f = open("text_blocks/calendar_intro.tex", "r")
     intro =  f.read()
     start_str = start.strftime("%b %d, %Y")
+    month = start.strftime("%m")
 
     intro = intro.replace("DATE1", start_str)
     intro = intro.replace("WEEKS", str(semanas))
+    intro = intro.replace("MONTH", str(month))
     return intro
 
 
@@ -165,7 +167,7 @@ def get_festivity_dates(date):
 def main():
 
     initial_date =  datetime.datetime.now()
-    number_of_weeks = 8
+    number_of_weeks = 10
 
     resulting_tex = ""
 

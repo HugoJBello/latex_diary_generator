@@ -164,7 +164,7 @@ def get_festivity_dates(date):
  
     
 
-def main():
+def generate_diary():
 
     initial_date =  datetime.datetime.now()
     number_of_weeks = 10
@@ -203,7 +203,7 @@ def main():
     with open('result.tex', 'w') as f:
         f.write(resulting_tex)
 
-
-main()
+if __name__ == "__main__":
+    generate_diary()
 
 

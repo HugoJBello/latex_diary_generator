@@ -1,9 +1,12 @@
 
 import datetime
 import locale
-from matplotlib import pyplot as plt
+import argparse
 from lunar_phase import phase,position
 import json
+
+DEFAULT_NUMBER_OF_WEEKS = 4
+DEFAULT_CALENDAR_MODE = "single"
 
 with open('fechas/fechas_importantes_uva.json', 'r') as file:
     fechas_importantes_uva = json.load(file)
@@ -17,6 +20,8 @@ def generate_heading():
 
 
 def generate_graph(initial_date, number_of_weeks=15):
+    from matplotlib import pyplot as plt
+
     fig, ax = plt.subplots()
 
     # We need to draw the canvas, otherwise the labels won't be positioned and 
@@ -84,10 +89,14 @@ def generate_calendar_intro(start, semanas):
     return intro
 
 
-def generate_calendar_page(start):
+def generate_calendar_page(start, calendar_mode=DEFAULT_CALENDAR_MODE):
 
 
-    f = open("text_blocks/calendar.tex", "r")
+    template_path = "text_blocks/calendar_single.tex"
+    if calendar_mode == "double":
+        template_path = "text_blocks/calendar.tex"
+
+    f = open(template_path, "r")
     table =  f.read()
     mes = start.strftime("%b")
     
@@ -97,7 +106,7 @@ def generate_calendar_page(start):
     dateJ = start + datetime.timedelta(days=3)
     dateV = start + datetime.timedelta(days=4)
     dateS = start + datetime.timedelta(days=5)
-    dateD = start + datetime.timedelta(days=7)
+    dateD = start + datetime.timedelta(days=6)
 
     table = table.replace("MES", mes)
     table = table.replace("DATEL", surround_day(dateL))
@@ -144,7 +153,7 @@ def surround_day(date):
 def get_moon_image(phase_index):
     if phase_index == 8 :
         phase_index = 0
-    figure = """\\vspace{0.01cm} \centerline{\\includegraphics[width=0.5cm]{moon_phases/Moon_phase_number.svg.png}} \\vspace{0.1cm}"""
+    figure = """\\includegraphics[width=0.32cm]{moon_phases/Moon_phase_number.svg.png}"""
     return figure.replace("number", str(phase_index))    
 
 def get_important_dates(date):
@@ -164,10 +173,12 @@ def get_festivity_dates(date):
  
     
 
-def generate_diary():
+def generate_diary(
+    number_of_weeks=DEFAULT_NUMBER_OF_WEEKS,
+    calendar_mode=DEFAULT_CALENDAR_MODE,
+):
 
     initial_date =  datetime.datetime.now()
-    number_of_weeks = 10
 
     resulting_tex = ""
 
@@ -194,7 +205,7 @@ def generate_diary():
         end = start + datetime.timedelta(days=6)
         current_date = end + datetime.timedelta(days=1)
 
-        calendar = generate_calendar_page(start)
+        calendar = generate_calendar_page(start, calendar_mode)
         resulting_tex = resulting_tex + calendar + "\n\\newpage"
     
     resulting_tex = resulting_tex + "\\end{document}"
@@ -203,7 +214,23 @@ def generate_diary():
     with open('result.tex', 'w') as f:
         f.write(resulting_tex)
 
+def main():
+    parser = argparse.ArgumentParser(description="Generate a LaTeX diary.")
+    parser.add_argument(
+        "number_of_weeks",
+        nargs="?",
+        type=int,
+        default=DEFAULT_NUMBER_OF_WEEKS,
+        help=f"number of weeks to generate (default: {DEFAULT_NUMBER_OF_WEEKS})",
+    )
+    parser.add_argument(
+        "--calendar-mode",
+        choices=["single", "double"],
+        default=DEFAULT_CALENDAR_MODE,
+        help="calendar layout: single page per week or legacy double page (default: single)",
+    )
+    args = parser.parse_args()
+    generate_diary(args.number_of_weeks, args.calendar_mode)
+
 if __name__ == "__main__":
-    generate_diary()
-
-
+    main()

@@ -39,4 +39,46 @@
 
 \newcommand{\subtablaDescrip}{ \begin{tabular}{ll}&\\ prioridad: & \Vtextvisiblespace[2em] \\ dificultad: & \Vtextvisiblespace[2em]\\&\\ \end{tabular}}
 
+\definecolor{calendarHeader}{RGB}{232,238,245}
+\definecolor{calendarWeekend}{RGB}{244,239,229}
+\definecolor{calendarBorder}{RGB}{110,122,135}
+
+\newcommand{\calendarMeta}[2]{%
+  {\footnotesize #1\par #2\par}%
+}
+
+\newcommand{\calendarMoonCorner}[1]{%
+  \hfill #1%
+}
+
+\newcommand{\calendarDayBlock}[5]{%
+\fcolorbox{calendarBorder}{white}{%
+\begin{minipage}[t][0.44\textheight][t]{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+\colorbox{calendarHeader}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\strut\textbf{\sffamily #1}\hfill #2}}%
+\vspace{0.8ex}
+\calendarMeta{#3}{#4}
+\vfill
+\calendarMoonCorner{#5}
+\end{minipage}}%
+}
+
+\newcommand{\calendarWeekendBlock}[8]{%
+\fcolorbox{calendarBorder}{white}{%
+\begin{minipage}[t][0.44\textheight][t]{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+\colorbox{calendarWeekend}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\strut\textbf{\sffamily Sábado}\hfill #1}}%
+\vspace{0.6ex}
+\calendarMeta{#2}{#3}
+\vfill
+\calendarMoonCorner{#4}
+\vspace{0.6ex}
+\hrule
+\vspace{0.6ex}
+\colorbox{calendarWeekend}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\strut\textbf{\sffamily Domingo}\hfill #5}}%
+\vspace{0.6ex}
+\calendarMeta{#6}{#7}
+\vfill
+\calendarMoonCorner{#8}
+\end{minipage}}%
+}
+
 \begin{document}

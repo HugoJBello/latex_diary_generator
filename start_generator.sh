@@ -4,7 +4,7 @@
 # chmod +x start_generator.sh
 # source venv/bin/activate
 
-python3 generate_diary.py
+python3 generate_diary.py "$@"
 
 pdflatex result.tex
 
